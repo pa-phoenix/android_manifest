@@ -3,11 +3,11 @@
 
   <!-- Build and Core -->
   <remove-project name="platform/art" />
-  <project path="art" name="AOSPA/android_art" remote="aospa" />
+  <project path="art" name="android_art" remote="requiem" />
   <remove-project name="platform/bionic" />
-  <project path="bionic" name="AOSPA/android_bionic" remote="aospa" />
+  <project path="bionic" name="android_bionic" remote="requiem" />
   <remove-project name="platform/build" />
-  <project path="build/make" name="AOSPA/android_build" remote="aospa" >
+  <project path="build/make" name="android_build" remote="requiem" >
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -17,7 +17,7 @@
     <linkfile src="tools" dest="build/tools" />
   </project>
   <remove-project name="platform/build/soong" />
-  <project path="build/soong" name="AOSPA/android_build_soong" remote="aospa" >
+  <project path="build/soong" name="android_build_soong" remote="requiem" >
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
@@ -26,24 +26,24 @@
 
   <!-- Bootable -->
   <remove-project name="platform/bootable/recovery" />
-  <project path="bootable/recovery" name="AOSPA/android_bootable_recovery" remote="aospa" />
+  <project path="bootable/recovery" name="android_bootable_recovery" remote="requiem" />
 
   <!-- Device -->
   <remove-project name="device/qcom/common" />
-  <project path="device/qcom/common" name="AOSPA/android_device_qcom_common" remote="aospa" >
+  <project path="device/qcom/common" name="android_device_qcom_common" remote="requiem" >
     <linkfile dest="vendor/qcom/build/tasks/generate_extra_images.mk" src="generate_extra_images.mk"/>
   </project>
   <remove-project name="device/qcom/sepolicy" />
   <project path="device/qcom/sepolicy" name="AOSPA/android_device_qcom_sepolicy" remote="aospa" />
   <project path="device/qcom/sepolicy-legacy" name="AOSPA/android_device_qcom_sepolicy" remote="aospa" revision="ruby-legacy"/>
   <remove-project name="kernel/build" />
-  <project path="device/qcom/kernelscripts" name="AOSPA/android_kernel_build" remote="aospa" >
+  <project path="device/qcom/kernelscripts" name="android_kernel_build" remote="requiem" >
     <linkfile dest="vendor/qcom/build/tasks/kernel_definitions.mk" src="kernel_definitions.mk"/>
   </project>
 
   <!-- External -->
   <remove-project name="platform/external/arm-optimized-routines" />
-  <project path="external/arm-optimized-routines" name="AOSPA/android_external_arm-optimized-routines" remote="aospa" />
+  <project path="external/arm-optimized-routines" name="android_external_arm-optimized-routines" remote="requiem" />
   <remove-project name="platform/external/compiler-rt" />
   <project path="external/compiler-rt" name="AOSPA/android_external_compiler-rt" remote="aospa" />
   <project path="external/exfatprogs" name="AOSPA/android_external_exfatprogs" remote="aospa" />
@@ -58,11 +58,15 @@
   <remove-project name="platform/external/scudo" />
   <project path="external/scudo" name="AOSPA/android_external_scudo" remote="aospa" />
   <remove-project name="platform/external/sqlite" />
-  <project path="external/sqlite" name="AOSPA/android_external_sqlite" remote="aospa" />
+  <project path="external/sqlite" name="android_external_sqlite" remote="requiem" />
   <remove-project name="platform/external/wpa_supplicant_8" />
   <project path="external/wpa_supplicant_8" name="AOSPA/android_external_wpa_supplicant_8" remote="aospa" />
   <remove-project name="platform/external/zlib" />
-  <project path="external/zlib" name="AOSPA/android_external_zlib" remote="aospa" />
+  <project path="external/zlib-ng" name="android_external_zlib-ng" remote="requiem" />
+  <remove-project name="platform/external/f2fs-tools" />
+  <project path="external/f2fs-tools" name="android_external_f2fs-tools" remote="requiem" />
+  <remove-project name="platform/external/cpu_features" />
+  <project path="external/cpu_features" name="android_external_cpu_features" remote="requiem" />
 
   <!-- External (AOSP) -->
   <remove-project name="platform/external/boringssl" />
@@ -94,13 +98,13 @@
 
   <!-- Frameworks -->
   <remove-project name="platform/frameworks/av" />
-  <project path="frameworks/av" name="AOSPA/android_frameworks_av" remote="aospa" />
+  <project path="frameworks/av" name="android_frameworks_av" remote="requiem" />
   <remove-project name="platform/frameworks/base" />
-  <project path="frameworks/base" name="AOSPA/android_frameworks_base" remote="aospa" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="requiem" />
   <remove-project name="platform/frameworks/libs/systemui" />
   <project path="frameworks/libs/systemui" name="AOSPA/android_frameworks_libs_systemui" remote="aospa" />
   <remove-project name="platform/frameworks/native" />
-  <project path="frameworks/native" name="AOSPA/android_frameworks_native" remote="aospa" />
+  <project path="frameworks/native" name="android_frameworks_native" remote="requiem" />
 
   <!-- Frameworks (AOSP) -->
   <remove-project name="platform/frameworks/hardware/interfaces" />
@@ -130,13 +134,13 @@
   <project path="kernel/configs" name="AOSPA/android_kernel_configs" remote="aospa" />
 
   <!-- Manifest -->
-  <project path="manifest" name="AOSPA/manifest" remote="aospa" />
+  <project path="manifest" name="android_manifest" remote="requiem" />
 
   <!-- Packages -->
   <remove-project name="platform/packages/apps/Launcher3" />
-  <project path="packages/apps/Launcher3" name="AOSPA/android_packages_apps_ParanoidLauncher" remote="aospa" />
+  <project path="packages/apps/Launcher3" name="android_packages_apps_ParanoidLauncher" remote="requiem" />
   <remove-project name="platform/packages/apps/Settings" />
-  <project path="packages/apps/Settings" name="AOSPA/android_packages_apps_Settings" remote="aospa" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="requiem" />
   <remove-project name="platform/packages/apps/ThemePicker" />
   <project path="packages/apps/ThemePicker" name="AOSPA/android_packages_apps_ThemePicker" remote="aospa" />
   <remove-project name="platform/packages/apps/WallpaperPicker2" />
@@ -196,7 +200,7 @@
   <remove-project name="platform/system/bt" />
   <project path="system/bt" name="AOSPA/android_system_bt" remote="aospa" />
   <remove-project name="platform/system/core" />
-  <project path="system/core" name="AOSPA/android_system_core" remote="aospa" />
+  <project path="system/core" name="android_system_core" remote="requiem" />
   <remove-project name="platform/system/connectivity/wificond" />
   <project path="system/connectivity/wificond" name="AOSPA/android_system_connectivity_wificond" remote="aospa" />
   <remove-project name="platform/system/hardware/interfaces" />
@@ -214,7 +218,7 @@
   <remove-project name="platform/system/security" />
   <project path="system/security" name="AOSPA/android_system_security" remote="aospa" />
   <remove-project name="platform/system/sepolicy" />
-  <project path="system/sepolicy" name="AOSPA/android_system_sepolicy" remote="aospa" />
+  <project path="system/sepolicy" name="android_system_sepolicy" remote="requiem" />
   <remove-project name="platform/system/update_engine" />
   <project path="system/update_engine" name="AOSPA/android_system_update_engine" remote="aospa" />
   <remove-project name="platform/system/vold" />
@@ -232,7 +236,7 @@
   <!-- Vendor (AOSPA) -->
   <project path="vendor/google/gms" name="ThankYouMario/proprietary_vendor_google_gms" remote="bitbucket" />
   <project path="vendor/google/pixel" name="android_vendor_google_pixel" remote="blobs" />
-  <project path="vendor/pa" name="AOSPA/android_vendor_pa" remote="aospa" >
+  <project path="vendor/pa" name="android_vendor_pa" remote="requiem" >
     <linkfile src="build.sh" dest="rom-build.sh" />
   </project>
   <project path="vendor/qcom/common" name="proprietary_vendor_qcom_common" remote="blobs" />
