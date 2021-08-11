@@ -67,6 +67,8 @@
   <project path="external/f2fs-tools" name="android_external_f2fs-tools" remote="requiem" />
   <remove-project name="platform/external/cpu_features" />
   <project path="external/cpu_features" name="android_external_cpu_features" remote="requiem" />
+  <remove-project name="platform/external/openssh" />
+  <project path="external/openssh" name="android_external_openssh" remote="requiem" />
 
   <!-- External (AOSP) -->
   <remove-project name="platform/external/boringssl" />
