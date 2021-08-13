@@ -214,7 +214,7 @@
   <remove-project name="platform/system/memory/lmkd" />
   <project path="system/memory/lmkd" name="AOSPA/android_system_memory_lmkd" remote="aospa" />
   <remove-project name="platform/system/netd" />
-  <project path="system/netd" name="AOSPA/android_system_netd" remote="aospa" />
+  <project path="system/netd" name="android_system_netd" remote="requiem" />
   <remove-project name="platform/system/nfc" />
   <project path="system/nfc" name="AOSPA/android_system_nfc" remote="aospa" />
   <remove-project name="platform/system/security" />
